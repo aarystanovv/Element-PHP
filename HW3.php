@@ -18,39 +18,27 @@ $nameAndAges = [
     'Al Pacino' => 82,
 ];
 ?>
-<!DOCTYPE html>
-<html>
-<body>
 
 <?php
 sort($nameAndAges);
-
-$clength = count($nameAndAges);
-for($x = 0; $x < $clength; $x++) {
-    echo $nameAndAges[$x];
-    echo "<br>";
-}
+echo "<ul><li>" . implode("</li><li>", $nameAndAges) . "</li></ul><hr>";
 echo "<br>";
 echo "<br>";
 ?>
 
-</body>
-</html>
-
-
-<!DOCTYPE html>
-<html>
-<body>
 
 <?php
 rsort($nameAndAges);
-
-$clength = count($nameAndAges);
-for($x = 0; $x < $clength; $x++) {
-    echo $nameAndAges[$x];
-    echo "<br>";
-}
+echo "<ul><li>" . implode("</li><li>", $nameAndAges) . "</li></ul><hr>";
 ?>
 
-</body>
-</html>
+
+<?php
+ksort($nameAndAges);
+echo "<ul><li>" . implode("</li><li>", array_keys($nameAndAges)) . "</li></ul><hr>";
+?>
+
+<?php
+krsort($nameAndAges);
+echo "<ul><li>" . implode("</li><li>", array_keys($nameAndAges)) . "</li></ul><hr>";
+?>
