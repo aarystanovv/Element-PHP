@@ -16,12 +16,11 @@ data();
 
 
 // 2 Zadanie
- function data2($data){
-     echo "<h2>Время в Алмате: $data</h2>";
+ function data2($format){
+     $data = date($format);
+     echo "<h2>Время в Алмате: $data </h2>";
  }
-
- $data = date("d.m.Y H:i:s");
- data2($data);
+ data2("d.m.Y H:i:s");
 
 // 3 Zadanie
 function proverka($int){
@@ -63,3 +62,10 @@ function test(...$intValues)
     return $result;
 }
 echo test(5, 8, 11, 0,  4, 3, 9, 1);
+
+
+$arr = [12, 4, 182, 1, 2.587];
+$min = null;
+$min_key = null;
+$max = null;
+$max_key = null;
