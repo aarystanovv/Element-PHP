@@ -1,4 +1,5 @@
 <?php
+require_once $_SERVER['DOCUMENT_ROOT']. '/Extra/Helpers.php';
 date_default_timezone_set("Etc/GMT-6");
 echo date_default_timezone_get();
 echo "<br>";echo "<br>";echo "<br>";
@@ -54,18 +55,12 @@ vote(21);
 // 5 Zadanie
 function test(...$intValues)
 {
-    $result = '';
-    foreach ($intValues as $intValue) {
-        $result .= $intValue;
-        return max(5, 8, 11, 0,  4, 3, 9, 1);
+    $maxInt = $intValues[0];
+    for ($i = 1; $i < count($intValues); $i++) {
+        if ($maxInt < $intValues[$i]) {
+            $maxInt = $intValues[$i];
+        }
     }
-    return $result;
+    return $maxInt;
 }
-echo test(5, 8, 11, 0,  4, 3, 9, 1);
-
-
-$arr = [12, 4, 182, 1, 2.587];
-$min = null;
-$min_key = null;
-$max = null;
-$max_key = null;
+pre(test(5,8,11,0,4,3,9,1,450,870));
