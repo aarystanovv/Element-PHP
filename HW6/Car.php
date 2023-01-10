@@ -1,6 +1,5 @@
 <?php
-use Driver;
-use Engine;
+
 require_once $_SERVER['DOCUMENT_ROOT']. '/Extra/Helpers.php';
 
 class Car {
@@ -45,8 +44,4 @@ class SportCar extends Car{
     public float $speed;
 }
 
-$obj = new Car();
-
-$obj->marka = 'BMW X5';
-$obj->weight = 2860;
-$obj->carClass = 'crossover';
+$obj = new Car('BMW X5', 'crossover', 2860, 'Temirlan', 3);

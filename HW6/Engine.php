@@ -12,3 +12,5 @@ class Engine{
         $this->company = $company;
     }
 }
+
+$obj = new Engine(225, "BMW");

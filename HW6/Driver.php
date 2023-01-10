@@ -1,7 +1,6 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT']. '/Extra/Helpers.php';
 
-use Car;
 class Driver extends Person {
     public int $experience;
 
@@ -11,3 +10,5 @@ class Driver extends Person {
     }
 
 }
+
+$obj = new Driver(25);

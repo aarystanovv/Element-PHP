@@ -12,3 +12,4 @@ class Person{
     }
 }
 
+$obj = new Person(31, 'Temirlan');
