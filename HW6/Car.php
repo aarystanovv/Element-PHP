@@ -1,6 +1,8 @@
 <?php
 
 require_once $_SERVER['DOCUMENT_ROOT']. '/Extra/Helpers.php';
+require_once $_SERVER['DOCUMENT_ROOT']. '/Extra/Driver.php';
+require_once $_SERVER['DOCUMENT_ROOT']. '/Extra/Engine.php';
 
 class Car {
     public String $marka;
@@ -34,6 +36,10 @@ class Car {
         pre("Поворот налево");
     }
 
+//    public function __toString(){
+//        return "$this->marka; $this->carClass; $this->weight; $this->driver; $this->engine";
+//    }
+
 }
 
 class Lorry extends Car{
@@ -44,6 +50,13 @@ class SportCar extends Car{
     public float $speed;
 }
 
+
+
 $driver = new Driver(25);
 $engine = new Engine(225, 'BMW');
 $car = new Car('BMW X5', 'crossover', 2860, $driver, $engine);
+
+$car->start();
+pre($car);
+$car->turnRight();
+pre($car);

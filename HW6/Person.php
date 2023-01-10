@@ -2,13 +2,17 @@
 require_once $_SERVER['DOCUMENT_ROOT']. '/Extra/Helpers.php';
 
 class Person{
-    private int $age;
     public String $fullName;
+    private int $age;
 
     public function __construct($age, $fullName)
     {
         $this->age = $age;
         $this->fullName = $fullName;
+    }
+
+    public function __toString(){
+        return "$this->fullName; $this->age";
     }
 }
 
