@@ -13,4 +13,4 @@ class Engine{
     }
 }
 
-$obj = new Engine(225, "BMW");
+$engine = new Engine(225, "BMW");

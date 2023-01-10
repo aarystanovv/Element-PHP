@@ -11,4 +11,4 @@ class Driver extends Person {
 
 }
 
-$obj = new Driver(25);
+$driver = new Driver(25);

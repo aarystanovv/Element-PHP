@@ -44,4 +44,6 @@ class SportCar extends Car{
     public float $speed;
 }
 
-$obj = new Car('BMW X5', 'crossover', 2860, 'Temirlan', 3);
+$driver = new Driver(25);
+$engine = new Engine(225, 'BMW');
+$car = new Car('BMW X5', 'crossover', 2860, $driver, $engine);
