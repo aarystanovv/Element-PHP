@@ -1,9 +1,6 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT']. '/Extra/Helpers.php';
-require_once $_SERVER['DOCUMENT_ROOT']. '/Extra/Car.php';
 
-
-class Engine extends Car {
+class Engine {
     public int $power;
     public string $company;
 
@@ -18,7 +15,3 @@ class Engine extends Car {
         return "$this->power; $this->company";
     }
 }
-
-$engine = new Engine(225, "BMW");
-$driver = new Driver(25);
-$car = new Car('BMW X5', 'crossover', 2860, $driver, $engine);

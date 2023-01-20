@@ -1,22 +1,17 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT']. '/Extra/Helpers.php';
-require_once $_SERVER['DOCUMENT_ROOT']. '/Extra/Person.php';
-
 
 class Driver extends Person {
     public int $experience;
 
-    public function __construct($experience)
+    public function __construct($age, $fullName, $experience)
     {
+        parent::__construct($age, $fullName);
         $this->experience = $experience;
     }
 
     public function __toString()
     {
-        return "$this->experience";
+        return "$this->fullName, $this->experience, ". $this->age;
     }
 
 }
-
-$driver = new Driver(25);
-$person = new Person(31, 'Temirlan');

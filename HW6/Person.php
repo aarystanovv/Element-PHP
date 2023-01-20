@@ -1,9 +1,8 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT']. '/Extra/Helpers.php';
 
 class Person{
     public String $fullName;
-    private int $age;
+    public int $age;
 
     public function __construct($age, $fullName)
     {
@@ -16,4 +15,3 @@ class Person{
     }
 }
 
-$person = new Person(31, 'Temirlan');
